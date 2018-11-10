@@ -10,11 +10,8 @@
     <h1>welcome to my blog</h1>
     <hr>
     {% for post in posts %}
-        <p style='font-family:Serif; font-size:16pt;font-weight:bold;'>
-		{{ post.title }}
-        </p>
-        <p style='font-family:Serif; font-size:10pt;letter-spacing:1pt;'>
-   {{ post.body }}
+    <p style='font-family:Serif; font-size:16pt;font-weight:bold;'>
+	     <a href='/post/{{ post.slug}}'>{{ post.title }}</a>
     </p>
     {% endfor %}
       
