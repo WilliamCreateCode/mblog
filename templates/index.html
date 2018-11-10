@@ -9,7 +9,15 @@
 <body>
     <h1>welcome to my blog</h1>
     <hr>
-    {{posts}}
+    {% for post in posts %}
+        <p style='font-family:Serif; font-size:16pt;font-weight:bold;'>
+		{{ post.title }}
+        </p>
+        <p style='font-family:Serif; font-size:10pt;letter-spacing:1pt;'>
+   {{ post.body }}
+    </p>
+    {% endfor %}
+      
     <hr>
     <h3> now time : {{ now }}</h3>
 </body>
