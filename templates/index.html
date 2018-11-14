@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <title>
-        welcome to my blog
-    </title>
-</head>
-<body>
-    <h1>welcome to my blog</h1>
-    <hr>
+<!-- index.html -->
+{% extends  'base.html' %}
+{% block title %} Welcome to my blog {% endblock %}
+{% block headmessage %}
+    <h3 style='font-family:Serif;'> this site post list</a>
+{% endblock %}
+
+{% block content %}
     {% for post in posts %}
-    <p style='font-family:Serif; font-size:16pt;font-weight:bold;'>
+        <p style='font-family:Serif; font-size:16pt;font-weight:bold;'>
 	     <a href='/post/{{ post.slug}}'>{{ post.title }}</a>
-    </p>
+        </p>
     {% endfor %}
-      
-    <hr>
-    <h3> now time : {{ now }}</h3>
-</body>
-</html>
+{% endblock %}
